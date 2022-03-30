@@ -12,7 +12,7 @@ const CategoryView = (props) => {
           alt={strCategory}
         />
 
-        <div className="p-5 relative h-60">
+        <div className="p-5 relative h-64">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
             {strCategory}
           </h5>
