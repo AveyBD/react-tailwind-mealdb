@@ -1,14 +1,19 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Home from "./components/Home/Home";
+import NotFound from "./components/NotFound/NotFound";
 
 function App() {
   return (
     <div>
       <Header></Header>
-      <Hero></Hero>
-      <Home></Home>
+      <Routes>
+        <Route path="/" element={<><Hero></Hero><Home></Home></>}></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
+      </Routes>
+      
     </div>
   );
 }
