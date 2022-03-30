@@ -1,8 +1,16 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const CategoryView = (props) => {
   const { strCategory, idCategory, strCategoryThumb, strCategoryDescription } =
     props.cat;
+    const navigate = useNavigate();
+
+    // Never Used  
+    const showCatMeals = () => {
+      const path = `/category/${idCategory}`;
+      navigate(path);
+    }
   return (
     <div>
       <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md">
@@ -20,8 +28,8 @@ const CategoryView = (props) => {
           <p className="mb-3 font-normal text-gray-700 ">
             {strCategoryDescription.slice(0, 150)}
           </p>
-          <a
-            href={`/category/${idCategory}`}
+          <Link
+            to={`/category/${idCategory}`}
             className="absolute bottom-2 inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
           >
             All Meals of {strCategory} Category
@@ -37,7 +45,7 @@ const CategoryView = (props) => {
                 clipRule="evenodd"
               ></path>
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
