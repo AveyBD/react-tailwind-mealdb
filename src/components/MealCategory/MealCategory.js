@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import CategoryView from "../CategoryView/CategoryView";
 
 const MealCategory = () => {
   const [cat, setCat] = useState([]);
@@ -11,8 +12,10 @@ const MealCategory = () => {
   }, []);
 
   return(
-    <div>
-        <h2>Total Category{cat.length}</h2>
+    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
+        {
+            cat.map(sCat => <CategoryView key={sCat.idCategory} cat={sCat}></CategoryView>)
+        }
     </div>
   );
 };
