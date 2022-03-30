@@ -1,4 +1,5 @@
 import React from "react";
+import MealCategory from "../MealCategory/MealCategory";
 
 const Home = () => {
   return (
@@ -7,6 +8,7 @@ const Home = () => {
       <h2 className="text-center text-orange-600 font-bold text-3xl">
         Have a look ar our Food Category!
       </h2>
+      <MealCategory></MealCategory>
     </div>
   );
 };
