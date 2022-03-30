@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import CategoryMeals from "./components/CategoryMeals/CategoryMeals";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Home from "./components/Home/Home";
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<><Hero></Hero><Home></Home></>}></Route>
         <Route path="/category" element={<MealCategory></MealCategory>}></Route>
+        <Route path="/category/:name" element={<CategoryMeals></CategoryMeals>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       
