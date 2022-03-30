@@ -5,7 +5,7 @@ const NotFound = () => {
   return (
     <div>
       <div className="flex items-center justify-center w-screen h-screen bg-gradient-to-r from-green-200 to-green-900"      >
-        <div className="px-40 py-20 bg-white rounded-md shadow-xl">
+        <div className="px-20 py-20 bg-white rounded-md shadow-xl">
           <div className="flex flex-col items-center">
             <h1 className="font-bold text-blue-600 text-9xl">404</h1>
 
