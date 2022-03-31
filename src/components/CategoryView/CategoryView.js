@@ -15,7 +15,7 @@ const CategoryView = (props) => {
     <div>
       <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md">
         <img
-          className="rounded-t-lg"
+          className="rounded-t-lg mx-auto"
           src={strCategoryThumb}
           alt={strCategory}
         />

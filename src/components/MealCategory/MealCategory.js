@@ -1,23 +1,37 @@
 import React, { useEffect, useState } from "react";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import { Link } from "react-router-dom";
 import CategoryView from "../CategoryView/CategoryView";
+import "react-loading-skeleton/dist/skeleton.css";
+import CatSkeleton from "../CatSkeleton/CatSkeleton";
 
 const MealCategory = () => {
   const [cat, setCat] = useState([]);
 
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    setTimeout(()=>{
+    setTimeout(() => {
       const url = `https://www.themealdb.com/api/json/v1/1/categories.php`;
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => setCat(data.categories));
-    }, 5000)
+      fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+          setCat(data.categories);
+          setIsLoading(false);
+        });
+    }, 5000);
   }, []);
 
-  return(
+  return (
     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
-        {
-            cat.map(sCat => <CategoryView key={sCat.idCategory} cat={sCat}></CategoryView>)
-        }
+    {
+      isLoading ? <><CatSkeleton></CatSkeleton> <CatSkeleton></CatSkeleton> <CatSkeleton></CatSkeleton> <CatSkeleton></CatSkeleton>  </>
+      :
+      cat.map((sCat) => (
+        <CategoryView key={sCat.idCategory} cat={sCat}></CategoryView>
+      ))
+    }
+      
     </div>
   );
 };
