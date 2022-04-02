@@ -19,7 +19,7 @@ const MealCategory = () => {
           setCat(data.categories);
           setIsLoading(false);
         });
-    }, 5000);
+    }, 10);
   }, []);
 
   return (

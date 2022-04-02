@@ -11,7 +11,7 @@ const CategoryMeals = () => {
       fetch(url)
         .then((res) => res.json())
         .then((data) => setMeals(data.meals));
-    }, 5000);
+    }, 10);
   }, []);
   console.log(meals);
   return (
