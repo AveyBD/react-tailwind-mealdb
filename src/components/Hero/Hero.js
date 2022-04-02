@@ -12,7 +12,7 @@ const Hero = () => {
           loop
           muted
         ></video>
-        <div className="h-auto flex flex-col items-center justify-center">
+        <div className="h-52 md:h-screen flex flex-col items-center justify-center">
           <h1 className="text-white text-center text-6xl font-bold">
             Enjoy Your Moment
           </h1>
