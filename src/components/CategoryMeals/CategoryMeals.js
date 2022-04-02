@@ -19,7 +19,7 @@ const CategoryMeals = () => {
   }, []);
   console.log(meals);
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
+    <div className="grid grid-cols-1 justify-items-center md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
       { isLoading ? <><CatSkeleton></CatSkeleton> <CatSkeleton></CatSkeleton> <CatSkeleton></CatSkeleton> <CatSkeleton></CatSkeleton>  </>
       :
       meals.map((meal) => (
