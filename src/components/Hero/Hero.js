@@ -5,8 +5,14 @@ const Hero = () => {
   return (
     <div>
       <div>
-        <video className="-z-10 fixed" src={video} autoPlay loop muted></video>
-        <div className="h-screen flex flex-col items-center justify-center">
+        <video
+          className="-z-10 fixed object-cover"
+          src={video}
+          autoPlay
+          loop
+          muted
+        ></video>
+        <div className="h-auto flex flex-col items-center justify-center">
           <h1 className="text-white text-center text-6xl font-bold">
             Enjoy Your Moment
           </h1>
@@ -14,7 +20,7 @@ const Hero = () => {
             Live the moment with your favorite person!
           </p>
           <div>
-            <button className="px-4 py-2 mx-auto bg-white hover:bg-green-200 border-gray-500 border rounded mt-6">
+            <button className="px-4 py-2 mx-auto hidden bg-white hover:bg-green-200 border-gray-500 border rounded mt-6">
               Book Now
             </button>
           </div>
