@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import Meal from "../Meal/Meal";
 import CatSkeleton from "../CatSkeleton/CatSkeleton";
 
-
 const CategoryMeals = () => {
   const [meals, setMeals] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
